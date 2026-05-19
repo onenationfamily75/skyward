@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xsi:schemaLocation="
+    http://www.sitemaps.org/schemas/sitemap/0.9
+    http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- ═══════════════════════════════════════════════════
+       SKYWARD AIRLINES — XML SITEMAP
+       Domain  : https://skywardairlines.com
+       Generated: 2026-05-19
+       Contact : reservations@skywardairlines.com
+       WhatsApp: +254756830011
+  ═══════════════════════════════════════════════════ -->
+
+  <!-- ── CORE PAGES ─────────────────────────────────── -->
+
+  <url>
+    <loc>https://skywardairlines.com/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://skywardairlines.com/assets/images/hero-banner.jpg</image:loc>
+      <image:title>Skyward Airlines — Fly Kenya Your Way</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://skywardairlines.com/book</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://skywardairlines.com/destinations</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://skywardairlines.com/fares</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <url>
+    <loc>https://skywardairlines.com/fleet</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://skywardairlines.com/about</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://skywardairlines.com/contact</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- ── DESTINATION PAGES ──────────────────────────── -->
+
+  <url>
+    <loc>https://skywardairlines.com/destinations/mombasa</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://skywardairlines.com/assets/images/destinations/mombasa.jpg</image:loc>
+      <image:title>Fly Nairobi to Mombasa — From KSh 6,500</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://skywardairlines.com/destinations/diani-ukunda</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+    <image:image>
+      <image:loc>https://skywardairlines.com/assets/images/destinations/diani.jpg</image:loc>
+      <image:title>Fly Nairobi to Diani Beach — From KSh 6,500</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://skywardairlines.com/destinations/malindi</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+    <image:image>
+      <image:loc>https://skywardairlines.com/assets/images/destinations/malindi.jpg</image:loc>
+      <image:title>Fly Nairobi to Malindi — From KSh 6,500</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://skywardairlines.com/destinations/eldoret</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://skywardairlines.com/assets/images/destinations/eldoret.jpg</image:loc>
+      <image:title>Fly Nairobi to Eldoret — From KSh 6,500</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://skywardairlines.com/destinations/lamu</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://skywardairlines.com/assets/images/destinations/lamu.jpg</image:loc>
+      <image:title>Fly Nairobi to Lamu Island — From KSh 10,010</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://skywardairlines.com/destinations/lodwar</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+    <image:image>
+      <image:loc>https://skywardairlines.com/assets/images/destinations/lodwar.jpg</image:loc>
+      <image:title>Fly Nairobi to Lodwar — From KSh 11,960</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://skywardairlines.com/destinations/mandera</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://skywardairlines.com/assets/images/destinations/mandera.jpg</image:loc>
+      <image:title>Fly Nairobi to Mandera — From KSh 8,500</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://skywardairlines.com/destinations/kakuma</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://skywardairlines.com/assets/images/destinations/kakuma.jpg</image:loc>
+      <image:title>Fly Nairobi to Kakuma — From KSh 8,680</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://skywardairlines.com/destinations/migori</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://skywardairlines.com/assets/images/destinations/migori.jpg</image:loc>
+      <image:title>Fly Nairobi to Migori — From KSh 8,970</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://skywardairlines.com/destinations/kitale</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://skywardairlines.com/assets/images/destinations/kitale.jpg</image:loc>
+      <image:title>Fly Nairobi to Kitale — From KSh 10,010</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://skywardairlines.com/destinations/vipingo-ridge</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+    <image:image>
+      <image:loc>https://skywardairlines.com/assets/images/destinations/vipingo.jpg</image:loc>
+      <image:title>Fly Nairobi to Vipingo Ridge — From KSh 15,210</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://skywardairlines.com/destinations/dar-es-salaam</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://skywardairlines.com/assets/images/destinations/dar-es-salaam.jpg</image:loc>
+      <image:title>Fly Nairobi to Dar es Salaam Tanzania — From KSh 27,352</image:title>
+    </image:image>
+  </url>
+
+  <!-- ── FLEET PAGES ─────────────────────────────────── -->
+
+  <url>
+    <loc>https://skywardairlines.com/fleet/fokker-50</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+    <image:image>
+      <image:loc>https://skywardairlines.com/assets/images/fleet/fokker-50.jpg</image:loc>
+      <image:title>Skyward Airlines Fokker 50 — 50-seat turboprop</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://skywardairlines.com/fleet/bombardier-dash-8</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+    <image:image>
+      <image:loc>https://skywardairlines.com/assets/images/fleet/dash-8.jpg</image:loc>
+      <image:title>Skyward Airlines Bombardier Dash 8-100 — 37-seat turboprop</image:title>
+    </image:image>
+  </url>
+
+  <!-- ── TRAVEL INFO PAGES ───────────────────────────── -->
+
+  <url>
+    <loc>https://skywardairlines.com/travel-info/baggage-policy</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://skywardairlines.com/travel-info/check-in</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://skywardairlines.com/travel-info/flight-status</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://skywardairlines.com/travel-info/ticket-policies</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <url>
+    <loc>https://skywardairlines.com/travel-info/special-needs</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://skywardairlines.com/travel-info/faq</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <!-- ── LEGAL PAGES ─────────────────────────────────── -->
+
+  <url>
+    <loc>https://skywardairlines.com/privacy-policy</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
+  </url>
+
+  <url>
+    <loc>https://skywardairlines.com/terms-and-conditions</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
+  </url>
+
+  <url>
+    <loc>https://skywardairlines.com/cookie-policy</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+  </url>
+
+</urlset>

@@ -1,0 +1,60 @@
+# ============================================================
+# robots.txt — Skyward Airlines
+# https://skywardairlines.com/robots.txt
+# Last updated: 2026-05-19
+# ============================================================
+
+User-agent: *
+Allow: /
+
+# Disallow admin, private, and system paths
+Disallow: /admin/
+Disallow: /admin-panel/
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /logout/
+Disallow: /register/
+Disallow: /account/
+Disallow: /booking/confirmation/
+Disallow: /booking/payment/
+Disallow: /booking/process/
+Disallow: /api/
+Disallow: /api/v1/
+Disallow: /api/v2/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /cache/
+Disallow: /private/
+Disallow: /includes/
+Disallow: /config/
+Disallow: /assets/admin/
+Disallow: /uploads/private/
+Disallow: /search?*
+Disallow: /*?session=*
+Disallow: /*?token=*
+Disallow: /*?ref=*
+Disallow: /*?utm_*
+
+# Allow important static assets
+Allow: /assets/
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# ── Googlebot ──────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# ── Bingbot ────────────────────────────────────────────────
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# ── Google Image Bot ───────────────────────────────────────
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /assets/
+
+# ── Sitemap Location ───────────────────────────────────────
+Sitemap: https://skywardairlines.com/sitemap.xml
