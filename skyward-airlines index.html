@@ -71,7 +71,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--sky);color:var(--white);m
 .dest-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
 .dest-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;cursor:pointer;transition:all .2s;position:relative}
 .dest-card:hover{transform:translateY(-4px);border-color:var(--teal);box-shadow:0 12px 40px rgba(0,180,200,0.15)}
-.dest-img{height:160px;object-fit:cover;width:100%;display:block;transition:transform .3s}
+.dest-img{height:160px;object-fit:cover;width:100%;display:block;transition:transform .3s;background:linear-gradient(135deg,#0d2244,#1e3358)}
+.dest-img[src=""]{display:none}
 .dest-card:hover .dest-img{transform:scale(1.05)}
 .dest-body{padding:14px 16px}
 .dest-tag{font-size:10px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px}
@@ -405,7 +406,7 @@ footer{background:var(--sky2);border-top:1px solid var(--border);padding:40px;fo
   <div class="dest-grid">
 
     <div class="dest-card" onclick="openModal()">
-      <img class="dest-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&q=70&fit=crop" alt="Mombasa">
+      <img class="dest-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&q=70&fit=crop" onerror="this.src='https://images.unsplash.com/photo-1519046904884-53103b34b206?w=500&q=70&fit=crop'" alt="Mombasa">
       <div class="dest-body">
         <div class="dest-tag">Coastal · Beach</div>
         <div class="dest-name">Mombasa</div>
@@ -416,7 +417,7 @@ footer{background:var(--sky2);border-top:1px solid var(--border);padding:40px;fo
     </div>
 
     <div class="dest-card" onclick="openModal()">
-      <img class="dest-img" src="https://images.unsplash.com/photo-1534470372874-de58dcdf2b68?w=500&q=70&fit=crop" alt="Diani Ukunda">
+      <img class="dest-img" src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?w=500&q=70&fit=crop" alt="Diani Ukunda">
       <div class="dest-body">
         <div class="dest-tag">Beach · Resort</div>
         <div class="dest-name">Ukunda / Diani Beach</div>
@@ -427,7 +428,7 @@ footer{background:var(--sky2);border-top:1px solid var(--border);padding:40px;fo
     </div>
 
     <div class="dest-card" onclick="openModal()">
-      <img class="dest-img" src="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=500&q=70&fit=crop" alt="Malindi">
+      <img class="dest-img" src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&q=70&fit=crop" alt="Malindi">
       <div class="dest-body">
         <div class="dest-tag">Coastal · Heritage</div>
         <div class="dest-name">Malindi</div>
@@ -438,7 +439,7 @@ footer{background:var(--sky2);border-top:1px solid var(--border);padding:40px;fo
     </div>
 
     <div class="dest-card" onclick="openModal()">
-      <img class="dest-img" src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=500&q=70&fit=crop" alt="Eldoret">
+      <img class="dest-img" src="https://images.unsplash.com/photo-1530137073521-56f0df7979c6?w=500&q=70&fit=crop" onerror="this.src='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&q=70&fit=crop'" alt="Eldoret">
       <div class="dest-body">
         <div class="dest-tag">Upcountry · City</div>
         <div class="dest-name">Eldoret</div>
@@ -449,7 +450,7 @@ footer{background:var(--sky2);border-top:1px solid var(--border);padding:40px;fo
     </div>
 
     <div class="dest-card" onclick="openModal()">
-      <img class="dest-img" src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=500&q=70&fit=crop" alt="Lamu">
+      <img class="dest-img" src="https://source.unsplash.com/featured/500x320/?lamu,swahili,dhow,island,africa" onerror="this.src='https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?w=500&q=70&fit=crop'" alt="Lamu">
       <div class="dest-body">
         <div class="dest-tag">Island · Swahili Heritage</div>
         <div class="dest-name">Lamu</div>
@@ -460,7 +461,7 @@ footer{background:var(--sky2);border-top:1px solid var(--border);padding:40px;fo
     </div>
 
     <div class="dest-card" onclick="openModal()">
-      <img class="dest-img" src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?w=500&q=70&fit=crop" alt="Lodwar">
+      <img class="dest-img" src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=500&q=70&fit=crop" alt="Lodwar">
       <div class="dest-body">
         <div class="dest-tag">Northern Kenya</div>
         <div class="dest-name">Lodwar</div>
@@ -471,7 +472,7 @@ footer{background:var(--sky2);border-top:1px solid var(--border);padding:40px;fo
     </div>
 
     <div class="dest-card" onclick="openModal()">
-      <img class="dest-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=70&fit=crop" alt="Vipingo">
+      <img class="dest-img" src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=500&q=70&fit=crop" alt="Vipingo">
       <div class="dest-body">
         <div class="dest-tag">Golf · Beach Resort</div>
         <div class="dest-name">Vipingo Ridge</div>
@@ -482,7 +483,7 @@ footer{background:var(--sky2);border-top:1px solid var(--border);padding:40px;fo
     </div>
 
     <div class="dest-card" onclick="openModal()">
-      <img class="dest-img" src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=500&q=70&fit=crop" alt="Dar es Salaam">
+      <img class="dest-img" src="https://images.unsplash.com/photo-1548013146-72479768bada?w=500&q=70&fit=crop" alt="Dar es Salaam">
       <div class="dest-body">
         <div class="dest-tag">International · Tanzania</div>
         <div class="dest-name">Dar es Salaam</div>
