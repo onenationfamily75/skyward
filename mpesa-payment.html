@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M-Pesa Payment</title>
+<script src="jQuery-3_6_min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f0f4f8;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    padding: 40px 36px;
+    width: 100%;
+    max-width: 420px;
+  }
+  .logo-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .mpesa-badge {
+    background: #4caf50;
+    color: #fff;
+    font-weight: 800;
+    font-size: 1rem;
+    border-radius: 8px;
+    padding: 6px 14px;
+    letter-spacing: 1px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 1.45rem;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+  }
+  .subtitle {
+    text-align: center;
+    color: #7a8299;
+    font-size: .88rem;
+    margin-bottom: 28px;
+  }
+  label {
+    display: block;
+    font-size: .8rem;
+    font-weight: 700;
+    color: #444;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  input {
+    width: 100%;
+    border: 1.5px solid #d1d9e6;
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: .95rem;
+    color: #1a1a2e;
+    background: #f8fafc;
+    outline: none;
+    transition: border-color .2s;
+    margin-bottom: 18px;
+  }
+  input:focus { border-color: #4caf50; background: #fff; }
+  input::placeholder { color: #b0b8cc; }
+  .hint {
+    font-size: .78rem;
+    color: #9aa3b5;
+    margin-top: -14px;
+    margin-bottom: 18px;
+  }
+  #btn {
+    width: 100%;
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 9px;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: .5px;
+    transition: background .2s, transform .15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 22px;
+  }
+  #btn:hover { background: #43a047; }
+  #btn:active { transform: scale(.98); }
+  #btn:disabled { background: #a5d6a7; cursor: not-allowed; }
+  #result {
+    background: #f4f8f4;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: .84rem;
+    color: #2e7d32;
+    white-space: pre-wrap;
+    word-break: break-all;
+    min-height: 52px;
+    line-height: 1.6;
+    display: none;
+  }
+  #result.error { background: #fff3f3; border-color: #ffcdd2; color: #c62828; }
+  #result.loading { color: #555; background: #f8fafc; border-color: #d1d9e6; }
+  .divider {
+    height: 1px;
+    background: #e8edf5;
+    margin: 20px 0;
+  }
+  .secure-note {
+    text-align: center;
+    font-size: .78rem;
+    color: #9aa3b5;
+  }
+  .secure-note span { color: #4caf50; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="logo-row">
+    <div class="mpesa-badge">M-PESA</div>
+  </div>
+  <h1>Pay via M-Pesa</h1>
+  <p class="subtitle">Enter your Safaricom number and amount to complete payment</p>
+
+  <label for="phone">Phone Number</label>
+  <input type="tel" id="phone" placeholder="254712345678" maxlength="12">
+  <p class="hint">Format: 254XXXXXXXXX (no +, no spaces)</p>
+
+  <label for="amount">Amount (KES)</label>
+  <input type="number" id="amount" placeholder="e.g. 1500" min="1">
+
+  <button id="btn">
+    <span>💚</span> Send STK Push
+  </button>
+
+  <div id="result"></div>
+
+  <div class="divider"></div>
+  <p class="secure-note">🔒 Secured by <span>Safaricom M-Pesa Daraja API</span></p>
+</div>
+
+<script src="jQuery-3_6_min.js"></script>
+<script>
+$('#btn').click(function () {
+  const phone  = $("#phone").val().trim();
+  const amount = $("#amount").val().trim();
+
+  // Basic validation
+  if (!phone || phone.length < 12 || !phone.startsWith('254')) {
+    showResult('⚠ Please enter a valid phone number starting with 254 (e.g. 254712345678).', 'error');
+    return;
+  }
+  if (!amount || parseInt(amount) < 1) {
+    showResult('⚠ Please enter a valid amount.', 'error');
+    return;
+  }
+
+  // Disable button during request
+  $('#btn').prop('disabled', true).html('<span>⏳</span> Processing...');
+  showResult('Sending STK Push to ' + phone + '...\nPlease wait and check your phone.', 'loading');
+
+  $.post('process.php', { phone: phone, amount: amount }, function (result) {
+    try {
+      const jsonObj = JSON.parse(result);
+      const pretty  = JSON.stringify(jsonObj, undefined, 2);
+
+      if (jsonObj.ResponseCode === '0' || jsonObj.errorCode === undefined) {
+        showResult('✅ STK Push sent successfully!\n\n' + pretty, 'success');
+      } else {
+        showResult('❌ Error from Safaricom:\n\n' + pretty, 'error');
+      }
+    } catch (e) {
+      // response wasn't JSON — show raw
+      showResult(result, 'error');
+    }
+  }).fail(function (xhr) {
+    showResult('❌ Network error (' + xhr.status + '): Could not reach process.php.\nEnsure the PHP server is running.', 'error');
+  }).always(function () {
+    $('#btn').prop('disabled', false).html('<span>💚</span> Send STK Push');
+  });
+});
+
+function showResult(msg, type) {
+  const el = $('#result');
+  el.removeClass('error loading').addClass(type === 'error' ? 'error' : type === 'loading' ? 'loading' : '');
+  el.text(msg).show();
+}
+</script>
+</body>
+</html>
